@@ -206,20 +206,21 @@ public class Controller implements Initializable {
 
                 double FCFSD = s.FCFSD(wt,size);
                 double SSTF = s.SSTF(wt,size);
-                double LOOK = s.LOOK(wt,size);
-                double CLOOK = s.CLOOK(wt,size);
-                double SCAN = s.SCAN(wt,size);
-                double CSCAN = s.CSCAN(wt,size);
+//                double LOOK = s.LOOK(wt,size);
+//                double CLOOK = s.CLOOK(wt,size);
+//                double SCAN = s.SCAN(wt,size);
+//                double CSCAN = s.CSCAN(wt,size);
 
 
 
                 ObservableList<PieChart.Data> chart = FXCollections.observableArrayList(
                         new PieChart.Data("FCFS Scheduling", FCFSD),
-                        new PieChart.Data("SSTF Scheduling", SSTF),
-                        new PieChart.Data("LOOK Scheduling", LOOK),
-                        new PieChart.Data("CLOOK Scheduling", CLOOK),
-                        new PieChart.Data("SCAN Scheduling", SCAN),
-                        new PieChart.Data("CSCAN Scheduling", CSCAN));
+                        new PieChart.Data("SSTF Scheduling", SSTF)
+//                        new PieChart.Data("LOOK Scheduling", LOOK),
+//                        new PieChart.Data("CLOOK Scheduling", CLOOK),
+//                        new PieChart.Data("SCAN Scheduling", SCAN),
+//                        new PieChart.Data("CSCAN Scheduling", CSCAN)
+                );
 
                 PieChart2.setData(chart);
             } catch (Exception e) {
@@ -244,13 +245,12 @@ public class Controller implements Initializable {
 
                 double FCFSD = s.FCFSD(wt,size);
                 double SSTF = s.SSTF(wt,size);
-                double LOOK = s.LOOK(wt,size);
-                double CLOOK = s.CLOOK(wt,size);
-                double SCAN = s.SCAN(wt,size);
-                double CSCAN = s.CSCAN(wt,size);
+//                double LOOK = s.LOOK(wt,size);
+//                double CLOOK = s.CLOOK(wt,size);
+//                double SCAN = s.SCAN(wt,size);
+//                double CSCAN = s.CSCAN(wt,size);
 
-                BarChart2.setData(Data(Text2.getText(), FCFSD,
-                        SSTF, LOOK, CLOOK,SCAN,CSCAN));
+                BarChart2.setData(Data(Text2.getText(),FCFSD,SSTF));
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -260,34 +260,34 @@ public class Controller implements Initializable {
 
     }
 
-    private ObservableList<Series<String, Number>> Data(String len, double FCFSD, double SSTF, double LOOK, double CLOOK, double SCAN, double CSCAN) {
+    private ObservableList<Series<String, Number>> Data(String len, double FCFSD, double SSTF) {
 
         ObservableList<Series<String, Number>> answer = FXCollections.observableArrayList();
         Series<String, Number> FCFSDSeries = new Series<String, Number>();
         Series<String, Number> SSTFSeries = new Series<String, Number>();
-        Series<String, Number> LOOKSeries = new Series<String, Number>();
-        Series<String, Number> CLOOKSeries = new Series<String, Number>();
-        Series<String, Number> SCANSeries = new Series<String, Number>();
-        Series<String, Number> CSCANSeries = new Series<String, Number>();
+//        Series<String, Number> LOOKSeries = new Series<String, Number>();
+//        Series<String, Number> CLOOKSeries = new Series<String, Number>();
+//        Series<String, Number> SCANSeries = new Series<String, Number>();
+//        Series<String, Number> CSCANSeries = new Series<String, Number>();
 
 
         FCFSDSeries.setName("FCFSD Scheduling");
         SSTFSeries.setName("SSTF Scheduling");
-        LOOKSeries.setName("LOOK Scheduling");
-        CLOOKSeries.setName("CLOOK Scheduling");
-        SCANSeries.setName("SCAN Scheduling");
-        CSCANSeries.setName("CSCAN Scheduling");
+//        LOOKSeries.setName("LOOK Scheduling");
+//        CLOOKSeries.setName("CLOOK Scheduling");
+//        SCANSeries.setName("SCAN Scheduling");
+//        CSCANSeries.setName("CSCAN Scheduling");
 
 
         FCFSDSeries.getData().add(new XYChart.Data<String, Number>(len, FCFSD));
         SSTFSeries.getData().add(new XYChart.Data<String, Number>(len, SSTF));
-        LOOKSeries.getData().add(new XYChart.Data<String, Number>(len,LOOK));
-        CLOOKSeries.getData().add(new XYChart.Data<String, Number>(len, CLOOK));
-        SCANSeries.getData().add(new XYChart.Data<String, Number>(len, SCAN));
-        CSCANSeries.getData().add(new XYChart.Data<String, Number>(len, CSCAN));
+//        LOOKSeries.getData().add(new XYChart.Data<String, Number>(len,LOOK));
+//        CLOOKSeries.getData().add(new XYChart.Data<String, Number>(len, CLOOK));
+//        SCANSeries.getData().add(new XYChart.Data<String, Number>(len, SCAN));
+//        CSCANSeries.getData().add(new XYChart.Data<String, Number>(len, CSCAN));
 
 
-        answer.addAll(FCFSDSeries, SSTFSeries, LOOKSeries, CLOOKSeries, SCANSeries, CSCANSeries);
+        answer.addAll(FCFSDSeries, SSTFSeries);
         return answer;
     }
 

@@ -199,157 +199,157 @@ public class Scheduling {
         return avgt;
     }
 
-    double LOOK(int t[],int n) {
-        int[] d=new int[99999];
-        double total = 0;
-        int temp,max,dloc=0,h = 0;
-        double avgt;
-        h=t[n] = 0;
-        n=n+1;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=i;j<n;j++)
-            {
-                if(t[i]>t[j])
-                {
-                    temp=t[i];t[i]=t[j];t[j]=temp;
-                }
-            }
-        }
-        max=t[n];
-        for(int i=0;i<n;i++)
-        {
-            if(h==t[i]){dloc=i;break;}
-        }
-        int j=0;
-        for(int i=dloc;i>=0;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=dloc+1;i<n;i++)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=0;i<n-1;i++)
-        {	total=total+Math.abs(d[i]-d[i+1]);	}
-        System.out.println("Total no. of distance of tracks= "+total);
-        avgt=total/n;
-        return avgt;
-    }
-
-    double CLOOK(int t[],int n) {
-        int[] d=new int[99999];
-        double total = 0;
-        int temp,max,dloc=0,h = 0;
-        double avgt;
-        h=t[n] = 0;
-        n=n+1;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=i;j<n;j++)
-            {
-                if(t[i]>t[j])
-                {
-                    temp=t[i];t[i]=t[j];t[j]=temp;
-                }
-            }
-        }
-        max=t[n];
-        for(int i=0;i<n;i++)
-        {
-            if(h==t[i]){dloc=i;break;}
-        }
-        int j=0;
-        for(int i=dloc;i>=0;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=n-1;i>dloc;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=0;i<n-1;i++)
-        {	total=total+Math.abs(d[i]-d[i+1]);	}
-        System.out.println("Total no. of distance of tracks= "+total);
-        avgt=total/n;
-        return avgt;
-    }
-
-    double SCAN(int t[],int n) {
-        int[] d=new int[99999];
-        double total = 0;
-        int temp,max,dloc=0,h = 0;
-        double avgt;
-        h=t[n] = 0;
-        n=n+1;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=i;j<n;j++)
-            {
-                if(t[i]>t[j])
-                {
-                    temp=t[i];t[i]=t[j];t[j]=temp;
-                }
-            }
-        }
-        max=t[n];
-        for(int i=0;i<n;i++)
-        {
-            if(h==t[i]){dloc=i;break;}
-        }
-        int j=0;
-        for(int i=dloc;i>=0;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=n-1;i>dloc;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=0;i<n-1;i++)
-        {	total=total+Math.abs(d[i]-d[i+1]);	}
-        System.out.println("Total no. of distance of tracks= "+total);
-        avgt=total/n;
-        return avgt;
-}
-
-    double CSCAN(int t[],int n) {
-        int[] d=new int[99999];
-        double total = 0;
-        int temp,max,dloc=0,h = 0;
-        double avgt;
-        h=t[n] = 0;
-        n=n+1;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=i;j<n;j++)
-            {
-                if(t[i]>t[j])
-                {
-                    temp=t[i];t[i]=t[j];t[j]=temp;
-                }
-            }
-        }
-        max=t[n];
-        for(int i=0;i<n;i++)
-        {
-            if(h==t[i]){dloc=i;break;}
-        }
-        int j=0;
-        for(int i=dloc;i>=0;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=n-1;i>dloc;i--)
-        {
-            d[j]=t[i];j++;
-        }
-        for(int i=0;i<n-1;i++)
-        {	total=total+Math.abs(d[i]-d[i+1]);	}
-        System.out.println("Total no. of distance of tracks= "+total);
-        avgt=total/n;
-        return avgt;
-    }
+//    double LOOK(int t[],int n) {
+//        int[] d=new int[99999];
+//        double total = 0;
+//        int temp,max,dloc=0,h = 0;
+//        double avgt;
+//        h=t[n] = 0;
+//        n=n+1;
+//        for(int i=0;i<n;i++)
+//        {
+//            for(int j=i;j<n;j++)
+//            {
+//                if(t[i]>t[j])
+//                {
+//                    temp=t[i];t[i]=t[j];t[j]=temp;
+//                }
+//            }
+//        }
+//        max=t[n];
+//        for(int i=0;i<n;i++)
+//        {
+//            if(h==t[i]){dloc=i;break;}
+//        }
+//        int j=0;
+//        for(int i=dloc;i>=0;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=dloc+1;i<n;i++)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=0;i<n-1;i++)
+//        {	total=total+Math.abs(d[i]-d[i+1]);	}
+//        System.out.println("Total no. of distance of tracks= "+total);
+//        avgt=total/n;
+//        return avgt;
+//    }
+//
+//    double CLOOK(int t[],int n) {
+//        int[] d=new int[99999];
+//        double total = 0;
+//        int temp,max,dloc=0,h = 0;
+//        double avgt;
+//        h=t[n] = 0;
+//        n=n+1;
+//        for(int i=0;i<n;i++)
+//        {
+//            for(int j=i;j<n;j++)
+//            {
+//                if(t[i]>t[j])
+//                {
+//                    temp=t[i];t[i]=t[j];t[j]=temp;
+//                }
+//            }
+//        }
+//        max=t[n];
+//        for(int i=0;i<n;i++)
+//        {
+//            if(h==t[i]){dloc=i;break;}
+//        }
+//        int j=0;
+//        for(int i=dloc;i>=0;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=n-1;i>dloc;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=0;i<n-1;i++)
+//        {	total=total+Math.abs(d[i]-d[i+1]);	}
+//        System.out.println("Total no. of distance of tracks= "+total);
+//        avgt=total/n;
+//        return avgt;
+//    }
+//
+//    double SCAN(int t[],int n) {
+//        int[] d=new int[99999];
+//        double total = 0;
+//        int temp,max,dloc=0,h = 0;
+//        double avgt;
+//        h=t[n] = 0;
+//        n=n+1;
+//        for(int i=0;i<n;i++)
+//        {
+//            for(int j=i;j<n;j++)
+//            {
+//                if(t[i]>t[j])
+//                {
+//                    temp=t[i];t[i]=t[j];t[j]=temp;
+//                }
+//            }
+//        }
+//        max=t[n];
+//        for(int i=0;i<n;i++)
+//        {
+//            if(h==t[i]){dloc=i;break;}
+//        }
+//        int j=0;
+//        for(int i=dloc;i>=0;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=n-1;i>dloc;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=0;i<n-1;i++)
+//        {	total=total+Math.abs(d[i]-d[i+1]);	}
+//        System.out.println("Total no. of distance of tracks= "+total);
+//        avgt=total/n;
+//        return avgt;
+//}
+//
+//    double CSCAN(int t[],int n) {
+//        int[] d=new int[99999];
+//        double total = 0;
+//        int temp,max,dloc=0,h = 0;
+//        double avgt;
+//        h=t[n] = 0;
+//        n=n+1;
+//        for(int i=0;i<n;i++)
+//        {
+//            for(int j=i;j<n;j++)
+//            {
+//                if(t[i]>t[j])
+//                {
+//                    temp=t[i];t[i]=t[j];t[j]=temp;
+//                }
+//            }
+//        }
+//        max=t[n];
+//        for(int i=0;i<n;i++)
+//        {
+//            if(h==t[i]){dloc=i;break;}
+//        }
+//        int j=0;
+//        for(int i=dloc;i>=0;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=n-1;i>dloc;i--)
+//        {
+//            d[j]=t[i];j++;
+//        }
+//        for(int i=0;i<n-1;i++)
+//        {	total=total+Math.abs(d[i]-d[i+1]);	}
+//        System.out.println("Total no. of distance of tracks= "+total);
+//        avgt=total/n;
+//        return avgt;
+//    }
 
 }
 
