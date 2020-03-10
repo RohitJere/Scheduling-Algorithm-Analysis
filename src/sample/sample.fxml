@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TabPane id="tabpane" layoutX="-3.0" layoutY="-1.0" prefHeight="700.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+
+                <Tab text="CPU SCHEDULING">
+                    <content>
+                        <AnchorPane id="Content" cache="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mouseTransparent="false" pickOnBounds="true" prefHeight="178.0" prefWidth="518.0">
+                            <children>
+                                <PieChart id="PieChart1" fx:id="PieChart1" layoutY="-2.0" prefHeight="555.0" prefWidth="700.0" title="Time Required" AnchorPane.topAnchor="5.0" />
+                                <JFXButton fx:id="buttonjfx1" layoutX="502.0" layoutY="600.0" onAction="#buttonpiechart1" prefHeight="29.0" prefWidth="85.0" text="Calculate" />
+                                <JFXComboBox fx:id="cb1" layoutX="163.0" layoutY="602.0" prefHeight="27.0" prefWidth="116.0" />
+                                <Label layoutX="303.0" layoutY="606.0" text="Size">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Text1" layoutX="349.0" layoutY="602.0" prefHeight="27.0" prefWidth="125.0" />
+                                <Label layoutX="113.0" layoutY="606.0" text="Chart">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <BarChart fx:id="BarChart1" layoutY="3.0" prefHeight="568.0" prefWidth="700.0" title="Time Required" AnchorPane.topAnchor="5.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <Tab text="DISK SCHEDULING">
+                    <content>
+                        <AnchorPane id="Content" cache="false" minHeight="0.0" minWidth="0.0" mouseTransparent="false" pickOnBounds="true" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <PieChart fx:id="PieChart2" layoutY="-2.0" prefHeight="556.0" prefWidth="700.0" title="Time Required" AnchorPane.topAnchor="5.0" />
+                                <JFXButton fx:id="buttonjfx2" layoutX="502.0" layoutY="600.0" onAction="#buttonpiechart2" prefHeight="29.0" prefWidth="85.0" text="Calculate" />
+                                <JFXComboBox fx:id="cb2" layoutX="163.0" layoutY="602.0" prefHeight="27.0" prefWidth="116.0" />
+                                <Label layoutX="303.0" layoutY="606.0" text="Size">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Text2" layoutX="349.0" layoutY="602.0" prefHeight="27.0" prefWidth="125.0" />
+                                <Label layoutX="113.0" layoutY="606.0" text="Chart">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                                <BarChart fx:id="BarChart2" layoutY="3.0" prefHeight="580.0" prefWidth="700.0" title="Time Required" AnchorPane.topAnchor="5.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                            </children>
+                    </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+
+    </children>
+</AnchorPane>
