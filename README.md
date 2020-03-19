@@ -16,11 +16,6 @@ This project attempts to analyze all major Scheduling algorithms. Algorithms suc
 * LOOK Scheduling Algorithm **(Yet to be done)**
 * C-LOOK Scheduling Algorithm **(Yet to be done)**
 
-
-
-## Contributing
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Built With
 * Java
 * JavaFX
@@ -28,4 +23,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 * Font-Awesome
 
 ## License
-This project is licensed under the GNU General Public License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU General Public License - see the [LICENSE](LICENSE) file for details
